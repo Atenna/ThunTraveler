@@ -1,32 +1,24 @@
-<p>Search for your train from Thun to Zürich:</p>
+<h3>Search for your train</h3>
 
-<table>
-    <tr>
-        <td>
-            <h5>Arrival to Thun</h5>
-        </td>
-        <td>
-            <h5>Departure from Thun</h5>
-        </td>
-        <td>
-            <h5>Arrival to Zürich</h5>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>7:15</p>
-        </td>
-        <td>
-            <p>7:20</p>
-        </td>
-        <td>
-            <p>8:42</p>
-        </td>
-    </tr>
-</table>
+<form name="travelPlanForm" ng-controller="TravelViewController as travelCtrl"
+      ng-submit="travelPlanForm.$valid && travelCtrl.setPlaces(travelCtrl.places.A, travelCtrl.places.B)" novalidate>
 
-<div class="btn-group">
-    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
-    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
-    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
-</div>
+    <div class="input-group">
+        <select ng-model="travelCtrl.places.A" ng-options="place.name for place in travelCtrl.places" required>
+            <option value="" selected disabled>From</option>
+        </select>
+        <input type="date" required/>
+        <select ng-model="travelCtrl.places.B" ng-options="place.name for place in travelCtrl.places" required>
+            <option value="" selected disabled>To</option>
+        </select>
+        <input type="date" required />
+    </div>
+    <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
