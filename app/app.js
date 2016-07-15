@@ -4,11 +4,18 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.travel',
-  'myApp.about',
-  'myApp.version',
+  'myApp.about'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
+
+  $routeProvider.when('/travel', {
+    templateUrl: 'components/travel/index.html'
+  });
+
+  $routeProvider.when('/about', {
+    templateUrl: 'components/about/index.html'
+  });
 
   $routeProvider.otherwise({redirectTo: '/travel'});
 }]);

@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.travel', ['ngRoute'])
+angular.module('myApp.about', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/travel', {
-    templateUrl: 'travel/travel.html',
-    controller: 'TravelCtrl'
+  $routeProvider.when('/about', {
+    templateUrl: './index.html',
+    controller: 'AboutController'
   });
 }])
 
-.controller('TravelCtrl', [function() {
+.controller('AboutController', [function() {
 
 }]);

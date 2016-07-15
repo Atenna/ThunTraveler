@@ -1,6 +1,6 @@
 <h3>Search for your train</h3>
 
-<form name="travelPlanForm" ng-controller="TravelViewController as travelCtrl"
+<form name="travelPlanForm" ng-controller="TravelController as travelCtrl"
       ng-submit="travelPlanForm.$valid && travelCtrl.setPlaces(travelCtrl.places.A, travelCtrl.places.B)" novalidate>
 
     <div class="input-group">
@@ -13,12 +13,10 @@
         </select>
         <input type="date" required />
     </div>
-    <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
-    <button type="submit">Submit</button>
+
+    <button type="submit">Search</button>
+
+    <p ng-repeat="person in travelCtrl.employees">{{person.Employee.LastName}}</p>
+
 </form>
 
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
