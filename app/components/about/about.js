@@ -4,11 +4,11 @@ angular.module('myApp.travel', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/travel', {
-    templateUrl: 'view1/travel.html',
-    controller: 'TravelViewController'
+    templateUrl: 'travel/travel.html',
+    controller: 'TravelCtrl'
   });
 }])
 
-.controller('TravelViewController', [function() {
+.controller('TravelCtrl', [function() {
 
 }]);

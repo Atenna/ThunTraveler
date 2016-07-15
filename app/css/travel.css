@@ -28,3 +28,19 @@
   content: "";
   padding: 0;
 }
+
+.red {
+  background-color: #00b3ee;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: mediumvioletred;;
+}
+
+.ng-invalid {
+  border-color: mediumvioletred;;
+}
+
+.ng-dirty.ng-valid {
+  border-color: greenyellow;;
+}

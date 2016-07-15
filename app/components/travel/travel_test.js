@@ -1,6 +1,6 @@
 'use strict';
 
-describe('myApp.view1 module', function() {
+describe('myApp.travel module', function() {
 
   beforeEach(module('myApp.travel'));
 
